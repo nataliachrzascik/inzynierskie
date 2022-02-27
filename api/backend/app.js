@@ -47,6 +47,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 // app.use(cookieParser());
 
+/*
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, '../recipes-api/build/index.html'), function(err) {
     if (err) {
@@ -54,7 +55,7 @@ app.get('/*', function(req, res) {
     }
   })
 });
-
+*/
 
 app.use(express.static(path.resolve(__dirname, '../recipes-api/build')));
 // app.use(fileUpload())
