@@ -13,9 +13,10 @@ app.use(cors(corsOptions));
 
 const db = require("./models");
 const Role = db.role;
-
+let dev_db_url = process.env.URL;
+var mongoDB = dbConfig.KEY || dev_db_url;
 db.mongoose
-  .connect(dbConfig.KEY, {
+  .connect(mongoDB, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false
