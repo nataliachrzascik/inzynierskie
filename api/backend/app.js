@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const dbConfig = require('./config/dbConfig.js');
+// const dbConfig = require('./config/dbConfig.js');
 
 
 const app = express();
@@ -14,7 +14,7 @@ app.use(cors(corsOptions));
 const db = require("./models");
 const Role = db.role;
 let dev_db_url = process.env.URL;
-var mongoDB = dbConfig.KEY || dev_db_url;
+var mongoDB = dev_db_url;
 db.mongoose
   .connect(mongoDB, {
     useNewUrlParser: true,
