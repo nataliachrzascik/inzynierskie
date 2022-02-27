@@ -45,7 +45,7 @@ app.use(cors());
 // app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+// app.use(cookieParser());
 app.use(express.static(path.resolve(__dirname, '../recipes-api/build')));
 app.use(fileUpload())
 app.get('/', (req, res) => {
