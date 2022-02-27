@@ -36,12 +36,28 @@ db.mongoose
   }));
   app.use(bodyParser.json({limit: "50mb"}));
 
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
+
+app.use(cors());
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.resolve(__dirname, '../recipes-api/build')));
+app.use(fileUpload())
+app.get('/', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../recipes-api/build', "index.html"));
+});
+
 
 // simple route
+/*
 app.get("/", (req, res) => {
   res.json({ message: "Workk" });
 });
-
+*/
 require('./routes/authRoutes.js')(app);
 require('./routes/userRoutes.js')(app);
 require('./routes/addRecipe.js')(app);
