@@ -16,5 +16,9 @@
     "express-list-endpoints": "^5.0.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.0"
-  }
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "proxy": "http://localhost:8080"
 }
