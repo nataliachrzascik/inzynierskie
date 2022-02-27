@@ -59,6 +59,16 @@ app.get("/", (req, res) => {
   res.json({ message: "Workk" });
 });
 */
+app.get('*', function (req, res) { // This wildcard method handles all requests
+
+    Router.run(routes, req.path, function (Handler, state) {
+        var element = React.createElement(Handler);
+        var html = React.renderToString(element);
+        res.render('main', { content: html });
+    });
+});
+
+
 require('./routes/authRoutes.js')(app);
 require('./routes/userRoutes.js')(app);
 require('./routes/addRecipe.js')(app);
