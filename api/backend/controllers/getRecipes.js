@@ -1,10 +1,7 @@
-const config = require("../config/authConfig.js");
+
 const db = require("../models");
 const Recipes = db.recipes;
 
-
-var jwt = require("jsonwebtoken");
-var bcrypt = require("bcryptjs");
 
 exports.getRecipes = (req, res) => {
  
