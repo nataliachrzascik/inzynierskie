@@ -116,12 +116,12 @@ class App extends Component {
               <Route exact path={["/", "/home"]} component={Home} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/register" component={Register} />
-              <Route path="/mainPage" component={MainPage} />
-              <Route exact path="/addRecipe" component={AddRecipe} />
-              <Route path="/profile" component={Profile} />
+              <Route path="/mainPage" component={currentUser ? MainPage : Login} />
+              <Route exact path="/addRecipe" component={currentUser ? AddRecipe : Login} />
+              <Route path="/profile" component={currentUser ? Profile : Login} />
               <Route path="/user" component={User} />
               <Route path="/admin" component={Admin} />
-              <Route path="/userAccount" component={SomeonesProfile} />
+              <Route path="/userAccount" component={currentUser ? SomeonesProfile : Login} />
 
               
             </Switch>
