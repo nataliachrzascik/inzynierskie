@@ -1,6 +1,5 @@
-const config = require("../config/authConfig.js");
 const db = require("../models");
-var jwt = require("jsonwebtoken");
+const jwt = require("jsonwebtoken");
 
 exports.addToFriends = (req, res) => {
 const myID=req.body.myID;
