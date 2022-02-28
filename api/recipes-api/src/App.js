@@ -59,8 +59,8 @@ class App extends Component {
       <Router history={history}>
          <BrowserRouter>
         <div>
-       
-          <nav className="navbar navbar-expand colorHeader">
+       <div className="colorHeader">
+          <nav className="navbar navbar-expand">
             <div className="navbar-nav mr-auto">
 
               {!currentUser? (
@@ -110,6 +110,7 @@ class App extends Component {
               </div>
             )}
           </nav>
+        </div>
 
           <div className="container mt-3">
             <Switch>
