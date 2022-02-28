@@ -1,8 +1,6 @@
 const db = require("../models");
 const Recipes = db.recipes;
 
-const jwt = require("jsonwebtoken");
-const bcrypt = require("bcryptjs");
 
 exports.getMyRecipes = (req, res) => {
   let nickUrl=req.url.substring(19)
