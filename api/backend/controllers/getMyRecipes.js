@@ -1,10 +1,8 @@
-const config = require("../config/authConfig.js");
 const db = require("../models");
 const Recipes = db.recipes;
 
-
-var jwt = require("jsonwebtoken");
-var bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcryptjs");
 
 exports.getMyRecipes = (req, res) => {
   let nickUrl=req.url.substring(19)
