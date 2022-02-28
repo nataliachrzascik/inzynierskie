@@ -1,11 +1,6 @@
 const db = require("../models");
 const Recipes = db.recipes;
 
-const jwt = require("jsonwebtoken");
-const bcrypt = require("bcryptjs");
-
-
-
 exports.getItemRecipe = (req, res) => {
   let categoryUrl=req.url.substring(18)
   
