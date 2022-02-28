@@ -1,7 +1,5 @@
 const db = require("../models");
 
-const jwt = require("jsonwebtoken");
-
 
 exports.addToFavourites = (req, res) => {
 const recipe=req.body.path;
