@@ -1,6 +1,6 @@
 const db = require("../models");
-var jwt = require("jsonwebtoken");
-var bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcryptjs");
 
 exports.addComment = (req, res) => {
   let itemUrl=req.url.substring(16)
