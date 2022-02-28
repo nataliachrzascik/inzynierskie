@@ -1,6 +1,6 @@
 const db = require("../models");
 
-var jwt = require("jsonwebtoken");
+const jwt = require("jsonwebtoken");
 
 
 exports.addToFavourites = (req, res) => {
