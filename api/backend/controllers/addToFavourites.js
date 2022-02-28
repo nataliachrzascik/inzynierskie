@@ -1,10 +1,6 @@
-const config = require("../config/authConfig.js");
 const db = require("../models");
 
-
 var jwt = require("jsonwebtoken");
-
-
 
 
 exports.addToFavourites = (req, res) => {
