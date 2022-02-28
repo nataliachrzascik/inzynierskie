@@ -1,11 +1,6 @@
-const config = require("../config/authConfig.js");
 const db = require("../models");
-
-
-var jwt = require("jsonwebtoken");
-var bcrypt = require("bcryptjs");
-
-
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcryptjs");
 
 exports.changeMyPersonalData = (req, res) => {
   let itemUrl=req.url.substring(26)
