@@ -1,5 +1,4 @@
 const db = require("../models");
-const jwt = require("jsonwebtoken");
 
 exports.addToFriends = (req, res) => {
 const myID=req.body.myID;
