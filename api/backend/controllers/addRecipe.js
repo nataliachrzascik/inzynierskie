@@ -1,7 +1,5 @@
 const db = require("../models");
 const Recipes = db.recipes;
-const jwt = require("jsonwebtoken");
-const bcrypt = require("bcryptjs");
 
 exports.add = (req, res) => {
   const recipe = new Recipes({
