@@ -1,11 +1,8 @@
-const config = require("../config/authConfig.js");
 const mongoose = require('mongoose');
 const db = require("../models");
 const Recipes = db.recipes;
-
-
-var jwt = require("jsonwebtoken");
-var bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcryptjs");
 
 exports.getFavouriteRecipes = (req, res) => {
  let objectIDRecipes=[];
